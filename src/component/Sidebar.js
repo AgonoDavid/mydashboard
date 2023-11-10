@@ -25,7 +25,7 @@ export const Sidebar = () => {
       fontFamily={'Space Grotesk'}
     >
       <Flex direction={'column'} pos={'sticky'} h={'100vh'} p={'10%'}>
-        <Image objectFit={'cover'} src={logo} alt="logo" w={'80%'} />
+        <Image objectFit={'cover'} src={logo} alt="logo" w={'90%'} />
         <Box mt={'4%'} textColor={'#7D7C7C'}>
           <Flex direction={'column'} lineHeight={'2.8'}>
             <Text fontSize={'15px'} fontWeight={'bold'}>
