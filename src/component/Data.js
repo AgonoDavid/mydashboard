@@ -1,6 +1,14 @@
 import React from 'react';
 import profile1 from '../assets/profileImage.jpg';
-import { Box, Flex, Image, Text, Container, Divider } from '@chakra-ui/react';
+import {
+  Box,
+  Flex,
+  Image,
+  Text,
+  Container,
+  Divider,
+  Button,
+} from '@chakra-ui/react';
 
 const Content = [
   {
@@ -14,7 +22,7 @@ const Content = [
     phoneNo: '(201) 555-0124',
     company: 'Plusstrip',
     date: '2020-06-09',
-    status: 'status',
+    status: 'High',
   },
 
   {
@@ -23,7 +31,7 @@ const Content = [
     phoneNo: '(201) 555-0124',
     company: 'Lexiqvolak',
     date: '2020-03-09',
-    status: 'status',
+    status: 'Low',
   },
 
   {
@@ -32,7 +40,7 @@ const Content = [
     phoneNo: '(201) 555-0124',
     company: 'Sunnamplex',
     date: '2020-07-15',
-    status: 'status',
+    status: 'Medium',
   },
   {
     img: profile1,
@@ -40,7 +48,7 @@ const Content = [
     phoneNo: '(201) 555-0124',
     company: 'year-job',
     date: '2020-01-12',
-    status: 'status',
+    status: 'High',
   },
   {
     img: profile1,
@@ -48,7 +56,7 @@ const Content = [
     phoneNo: '(201) 555-0124',
     company: 'dambase',
     date: '2020-05-06',
-    status: 'status',
+    status: 'High',
   },
   {
     img: profile1,
@@ -56,7 +64,7 @@ const Content = [
     phoneNo: '(201) 555-0124',
     company: 'Treequote',
     date: '2020-05-30',
-    status: 'status',
+    status: 'Low',
   },
   {
     img: profile1,
@@ -64,7 +72,7 @@ const Content = [
     phoneNo: '(201) 555-0124',
     company: 'Nam-Zim',
     date: '2020-07-23',
-    status: 'status',
+    status: 'High',
   },
   {
     img: profile1,
@@ -72,7 +80,7 @@ const Content = [
     phoneNo: '(201) 555-0124',
     company: 'Iselectrics',
     date: '2020-06-18',
-    status: 'status',
+    status: 'Medium',
   },
 ];
 
@@ -90,6 +98,7 @@ export const Data = () => {
 };
 
 function Profile({ profileData }) {
+  const high = '#D6D5F7';
   return (
     <Box>
       <Flex direction={'row'}>
@@ -105,7 +114,7 @@ function Profile({ profileData }) {
           />
         </Container>
 
-        <Container fontSize={['5px', '12px', '12px']}>
+        <Container fontSize={['3px', '12px', '12px']}>
           <Text pb={'10px'}>{profileData.profile}</Text>
           <Text>{profileData.clientName}</Text>
           <Text>{profileData.phoneNo}</Text>
@@ -122,7 +131,20 @@ function Profile({ profileData }) {
         </Container>
         <Container fontSize={['5px', '12px', '12px']}>
           <Text pb={'10px'}>{profileData.stat}</Text>
-          <Text>{profileData.status}</Text>
+          <Button
+            size={['sm']}
+            bg={
+              profileData.status === 'High'
+                ? '#F4CE14'
+                : profileData.status === 'Low'
+                ? 'red' // Change 'green' to 'red' for 'Low'
+                : profileData.status === 'Medium'
+                ? 'green' // Change 'red' to 'green' for 'Medium'
+                : null
+            }
+          >
+            {profileData.status}
+          </Button>
         </Container>
         <Box fontSize={['5px', '12px', '12px']}>
           <Text>{profileData.icon}</Text>

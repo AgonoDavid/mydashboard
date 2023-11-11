@@ -18,8 +18,8 @@ export const Sidebar = () => {
 
   return (
     <Box
-      p={['7px']}
-      w={{ base: '20%', md: '20%' }} // Full width on small screens (base), 20% width on medium and larger screens (md)
+      p={['8px']}
+      w={{ base: '20%', md: '20%', lg: '20%' }} // Full width on small screens (base), 20% width on medium and larger screens (md)
       display={{ base: toggle ? 'none' : 'block', md: 'block' }} // Hide on small screens when toggle is true
       borderRight={'blue'}
       border={'1.5px solid #F1EFEF'}
@@ -28,6 +28,7 @@ export const Sidebar = () => {
       borderLeft={'none'}
       fontFamily={'Space Grotesk'}
       h={'100vh'}
+      pos={'fixed'}
     >
       <Box pt={'30px'} pos={'fixed'}>
         <Flex direction={'column'} p={[0, '5%']}>
@@ -38,7 +39,7 @@ export const Sidebar = () => {
             w={['20%', '50%', '55%']}
           />
           <Flex direction={'column'}>
-            <Box mt={['20%', '9%', '9%']} textColor={'#7D7C7C'}>
+            <Box mt={['20%', '8%', '0%']} textColor={'#7D7C7C'}>
               <Flex direction={'column'} lineHeight={['10', '2.8', '2.8']}>
                 <Text fontSize={['11px', '15px', '15px']} fontWeight={'bold'}>
                   Account
@@ -68,7 +69,7 @@ export const Sidebar = () => {
                 <Flex>
                   <Image
                     src={calender}
-                    w={['6%', '10%', '10%']}
+                    w={['6%', '9%', '7%']}
                     objectFit={'contain'}
                     alt="calender"
                   />
@@ -83,7 +84,7 @@ export const Sidebar = () => {
                   <Image
                     src={task}
                     objectFit={'contain'}
-                    w={['6%', '10%', '10%']}
+                    w={['6%', '9%', '7%']}
                     alt="task"
                   />
                   <Text
@@ -97,7 +98,7 @@ export const Sidebar = () => {
                   <Image
                     src={contact}
                     objectFit={'contain'}
-                    w={['6%', '10%', '10%']}
+                    w={['6%', '9%', '7%']}
                     alt="contact"
                   />
                   <Text
@@ -111,7 +112,7 @@ export const Sidebar = () => {
                   <Image
                     src={cases}
                     objectFit={'contain'}
-                    w={['6%', '9%', '9%']}
+                    w={['6%', '7%', '7%']}
                     alt="cases"
                   />
                   <Text
@@ -125,7 +126,7 @@ export const Sidebar = () => {
                   <Image
                     src={mail}
                     objectFit={'contain'}
-                    w={['6%', '9%', '9%']}
+                    w={['6%', '7%', '7%']}
                     alt="communication"
                   />
                   <Text
@@ -139,7 +140,7 @@ export const Sidebar = () => {
                   <Image
                     src={funnel}
                     objectFit={'contain'}
-                    w={['6%', '9%', '9%']}
+                    w={['6%', '7%', '7%']}
                     alt="leads"
                   />
                   <Text
@@ -163,7 +164,7 @@ export const Sidebar = () => {
                 <Image
                   src={support}
                   objectFit={'contain'}
-                  w={['6%', '9%', '9%']}
+                  w={['6%', '7%', '7%']}
                   alt="support"
                 />
                 <Text
@@ -177,7 +178,7 @@ export const Sidebar = () => {
                 <Image
                   src={settings}
                   objectFit={'contain'}
-                  w={['6%', '9%', '9%']}
+                  w={['6%', '7%', '7%']}
                   alt="settings"
                 />
                 <Text

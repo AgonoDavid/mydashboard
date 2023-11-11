@@ -5,7 +5,11 @@ import { Data } from '../component/Data';
 
 export const Mainboard = () => {
   return (
-    <Box width={['100%', '100%', '80%']} fontFamily={'Space Grotesk'}>
+    <Box
+      width={['100%', '100%', '80%']}
+      fontFamily={'Space Grotesk'}
+      ml={['20%', '20%', '20%']}
+    >
       <Navbar />
       <Box px={['12px', '10px', '30px']} py={'30px'}>
         <Flex>
