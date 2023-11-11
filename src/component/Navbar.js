@@ -22,7 +22,7 @@ export const Navbar = () => {
           <Text
             fontFamily={'Lora'}
             fontWeight={'bold'}
-            fontSize={['14px', '10px', '2xl']}
+            fontSize={['14px', '10px', '20px']}
             as={'h1'}
           >
             Welcome, John Doe 👋
