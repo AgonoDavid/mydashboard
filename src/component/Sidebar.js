@@ -36,7 +36,7 @@ export const Sidebar = () => {
             objectFit={'cover'}
             src={logo}
             alt="logo"
-            w={['20%', '50%', '55%']}
+            w={['20%', '50%', '60%']}
           />
           <Flex direction={'column'}>
             <Box mt={['20%', '8%', '0%']} textColor={'#7D7C7C'}>
