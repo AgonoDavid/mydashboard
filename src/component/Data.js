@@ -1,5 +1,6 @@
 import React from 'react';
 import profile1 from '../assets/profileImage.jpg';
+
 import {
   Box,
   Flex,
@@ -98,7 +99,6 @@ export const Data = () => {
 };
 
 function Profile({ profileData }) {
-  const high = '#D6D5F7';
   return (
     <Box>
       <Flex direction={'row'}>
@@ -131,8 +131,11 @@ function Profile({ profileData }) {
         </Container>
         <Container fontSize={['5px', '12px', '12px']}>
           <Text pb={'10px'}>{profileData.stat}</Text>
-          <Button
-            size={['sm']}
+          <Box
+            fontSize={['5px', '12px', '12px']}
+            borderRadius={'10px'}
+            p={'5px'}
+            w={['100%', '80%', '80%']}
             bg={
               profileData.status === 'High'
                 ? '#F4CE14'
@@ -144,7 +147,7 @@ function Profile({ profileData }) {
             }
           >
             {profileData.status}
-          </Button>
+          </Box>
         </Container>
         <Box fontSize={['5px', '12px', '12px']}>
           <Text>{profileData.icon}</Text>
