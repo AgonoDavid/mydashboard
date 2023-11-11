@@ -17,15 +17,15 @@ import profileImage from '../assets/profileImage.jpg';
 export const Navbar = () => {
   return (
     <Box>
-      <Flex p={'30px'}>
+      <Flex px={'30px'} py={'18px'}>
         <Box>
           <Text
             fontFamily={'Lora'}
             fontWeight={'bold'}
-            fontSize={'30px'}
+            fontSize={'26px'}
             as={'h1'}
           >
-            👋 Welcome, David
+            👋 Welcome, John Doe
           </Text>
         </Box>
         <Spacer />
@@ -62,18 +62,21 @@ export const Navbar = () => {
             <Image />
           </Flex>
         </Box>
-        <Button
+        <Box
           bg={'none'}
           border={'1px solid #7D7C7C'}
           borderRadius={'15px'}
           p={'7px'}
           w={'10%'}
+          boxSize={'10%'}
         >
           <Flex align={'center'} gap={'10px'}>
-            <Image src={plus} w={'18%'} alt="plus" />
-            <Text fontSize={'13px'}>Add item</Text>
+            <Image src={plus} w={'18%'} objectFit={'contain'} alt="plus" />
+            <Text fontSize={'12px'} fontFamily={'Space Grotesk'}>
+              Add item
+            </Text>
           </Flex>
-        </Button>
+        </Box>
         <Button pl={'7px'} align={'center'} bg={'none'}>
           <Image src={profileImage} w={'45px'} borderRadius={'25px'} />
         </Button>
