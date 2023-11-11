@@ -40,7 +40,7 @@ export const Sidebar = () => {
           <Flex direction={'column'}>
             <Box mt={['20%', '9%', '9%']} textColor={'#7D7C7C'}>
               <Flex direction={'column'} lineHeight={['10', '2.8', '2.8']}>
-                <Text fontSize={['9px', '15px', '15px']} fontWeight={'bold'}>
+                <Text fontSize={['11px', '15px', '15px']} fontWeight={'bold'}>
                   Account
                 </Text>
                 <Flex
