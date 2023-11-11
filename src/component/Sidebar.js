@@ -14,11 +14,11 @@ import workers from '../assets/icons8-user-groups-100.png';
 import download from '../assets/icons8-umbrella-in-circle-22.png';
 
 export const Sidebar = () => {
-  const [toggle, setToggle] = useState(true);
+  const [toggle, setToggle] = useState(false);
 
   return (
     <Container
-      w={{ base: '100%', md: '20%' }} // Full width on small screens (base), 20% width on medium and larger screens (md)
+      w={{ base: '20%', md: '20%' }} // Full width on small screens (base), 20% width on medium and larger screens (md)
       display={{ base: toggle ? 'none' : 'block', md: 'block' }} // Hide on small screens when toggle is true
       borderRight={'blue'}
       border={'1.5px solid #F1EFEF'}
@@ -26,135 +26,203 @@ export const Sidebar = () => {
       borderBottom={'none'}
       borderLeft={'none'}
       fontFamily={'Space Grotesk'}
+      h={'100vh'}
     >
-      <Flex direction={'column'} pos={'sticky'} h={'100vh'} p={'10%'}>
-        <Image objectFit={'cover'} src={logo} alt="logo" w={'90%'} />
-        <Box mt={'4%'} textColor={'#7D7C7C'}>
-          <Flex direction={'column'} lineHeight={'2.8'}>
-            <Text fontSize={'15px'} fontWeight={'bold'}>
-              Account
-            </Text>
-            <Flex
-              border={'1px solid #362fd9'}
-              borderRadius={'15px'}
-              pl={'2px'}
-              bg={'#D6D5F7'}
-              textColor={'white'}
-            >
-              <Image src={home} objectFit={'contain'} w={'10%'} alt="home" />
-              <Text fontSize={'11px'} pl={'6px'} textColor={'#362fd9'}>
-                Home
-              </Text>
-            </Flex>
-            <Flex>
-              <Image
-                src={calender}
-                w={'10%'}
-                objectFit={'contain'}
-                alt="calender"
-              />
-              <Text fontSize={'11px'} pl={'6px'}>
-                Calender
-              </Text>
-            </Flex>
-            <Flex>
-              <Image src={task} objectFit={'contain'} w={'10%'} alt="task" />
-              <Text fontSize={'11px'} pl={'6px'}>
-                Task
-              </Text>
-            </Flex>
-            <Flex>
-              <Image
-                src={contact}
-                objectFit={'contain'}
-                w={'10%'}
-                alt="contact"
-              />
-              <Text fontSize={'11px'} pl={'6px'}>
-                Contacts
-              </Text>
-            </Flex>
-            <Flex>
-              <Image src={cases} objectFit={'contain'} w={'9%'} alt="cases" />
-              <Text fontSize={'11px'} pl={'6px'}>
-                Cases
-              </Text>
-            </Flex>
-            <Flex>
-              <Image
-                src={mail}
-                objectFit={'contain'}
-                w={'9%'}
-                alt="communication"
-              />
-              <Text fontSize={'11px'} pl={'6px'}>
-                Communication
-              </Text>
-            </Flex>
-            <Flex>
-              <Image src={funnel} objectFit={'contain'} w={'10%'} alt="leads" />
-              <Text fontSize={'11px'} pl={'6px'}>
-                Leads
-              </Text>
-            </Flex>
-          </Flex>
-        </Box>
-        <Box pt={'1%'} lineHeight={'2.4'} textColor={'grey'}>
-          <Text fontSize={'14px'} fontWeight={'bold'}>
-            Help
-          </Text>
-          <Flex>
-            <Image
-              src={support}
-              objectFit={'contain'}
-              w={'10%'}
-              alt="support"
-            />
-            <Text fontSize={'11px'} pl={'6px'}>
-              Support
-            </Text>
-          </Flex>
-          <Flex>
-            <Image
-              src={settings}
-              objectFit={'contain'}
-              w={'10%'}
-              alt="settings"
-            />
-            <Text fontSize={'11px'} pl={'6px'}>
-              Settings
-            </Text>
-          </Flex>
-        </Box>
-        <Box align={'center'}>
+      <Box pt={'30px'} pos={'fixed'}>
+        <Flex direction={'column'} p={[0, '5%']}>
           <Image
-            src={workers}
-            objectFit={'contain'}
-            w={'45%'}
-            alt="workers"
-            pb={'5px'}
-            pt={'5px'}
+            objectFit={'cover'}
+            src={logo}
+            alt="logo"
+            w={['23%', '50%', '55%']}
           />
-          <Text
-            textColor={'grey'}
-            fontSize={'10px'}
-            textAlign={'center'}
-            fontWeight={'bold'}
-            pb={'3px'}
-            pt={'3px'}
-          >
-            Download our Mobile App and be up to date
-          </Text>
-          <Button bg={'#362FD9'} textColor={'white'} mt={'10px'}>
-            <Flex>
-              <Image src={download} objectFit={'contain'} w={'13%'} />
-              <Text pl={'6px'} fontSize={'13px'}>
-                Donwload App
+          <Flex direction={'column'}>
+            <Box mt={['20%', '9%', '9%']} textColor={'#7D7C7C'}>
+              <Flex direction={'column'} lineHeight={['10', '2.8', '2.8']}>
+                <Text fontSize={['11px', '15px', '15px']} fontWeight={'bold'}>
+                  Account
+                </Text>
+                <Flex
+                  border={'1px solid #362fd9'}
+                  borderRadius={'25px'}
+                  pl={'2px'}
+                  bg={'#D6D5F7'}
+                  textColor={'white'}
+                  w={['10%', '55%']}
+                >
+                  <Image
+                    src={home}
+                    objectFit={'contain'}
+                    w={['60%', '10%', '20%']}
+                    alt="home"
+                  />
+                  <Text
+                    fontSize={{ base: '0', md: '11px' }}
+                    pl={{ base: '0', md: '6px' }}
+                    textColor={'#362fd9'}
+                  >
+                    Home
+                  </Text>
+                </Flex>
+                <Flex>
+                  <Image
+                    src={calender}
+                    w={['6%', '10%', '10%']}
+                    objectFit={'contain'}
+                    alt="calender"
+                  />
+                  <Text
+                    fontSize={{ base: '0', md: '11px' }}
+                    pl={{ base: '0', md: '6px' }}
+                  >
+                    Calender
+                  </Text>
+                </Flex>
+                <Flex>
+                  <Image
+                    src={task}
+                    objectFit={'contain'}
+                    w={['6%', '10%', '10%']}
+                    alt="task"
+                  />
+                  <Text
+                    fontSize={{ base: '0', md: '11px' }}
+                    pl={{ base: '0', md: '6px' }}
+                  >
+                    Task
+                  </Text>
+                </Flex>
+                <Flex>
+                  <Image
+                    src={contact}
+                    objectFit={'contain'}
+                    w={['6%', '10%', '10%']}
+                    alt="contact"
+                  />
+                  <Text
+                    fontSize={{ base: '0', md: '11px' }}
+                    pl={{ base: '0', md: '6px' }}
+                  >
+                    Contacts
+                  </Text>
+                </Flex>
+                <Flex>
+                  <Image
+                    src={cases}
+                    objectFit={'contain'}
+                    w={['6%', '9%', '9%']}
+                    alt="cases"
+                  />
+                  <Text
+                    fontSize={{ base: '0', md: '11px' }}
+                    pl={{ base: '0', md: '6px' }}
+                  >
+                    Cases
+                  </Text>
+                </Flex>
+                <Flex>
+                  <Image
+                    src={mail}
+                    objectFit={'contain'}
+                    w={['6%', '9%', '9%']}
+                    alt="communication"
+                  />
+                  <Text
+                    fontSize={{ base: '0', md: '11px' }}
+                    pl={{ base: '0', md: '6px' }}
+                  >
+                    Communication
+                  </Text>
+                </Flex>
+                <Flex>
+                  <Image
+                    src={funnel}
+                    objectFit={'contain'}
+                    w={['6%', '9%', '9%']}
+                    alt="leads"
+                  />
+                  <Text
+                    fontSize={{ base: '0', md: '11px' }}
+                    pl={{ base: '0', md: '6px' }}
+                  >
+                    Leads
+                  </Text>
+                </Flex>
+              </Flex>
+            </Box>
+            <Box
+              lineHeight={['10', '2.8', '2.8']}
+              textColor={'grey'}
+              pt={'15px'}
+            >
+              <Text fontSize={['12px', '14px', '14px']} fontWeight={'bold'}>
+                Help
               </Text>
-            </Flex>
-          </Button>
-        </Box>
-      </Flex>
+              <Flex>
+                <Image
+                  src={support}
+                  objectFit={'contain'}
+                  w={['6%', '9%', '9%']}
+                  alt="support"
+                />
+                <Text
+                  fontSize={{ base: '0', md: '11px' }}
+                  pl={{ base: '0', md: '6px' }}
+                >
+                  Support
+                </Text>
+              </Flex>
+              <Flex>
+                <Image
+                  src={settings}
+                  objectFit={'contain'}
+                  w={['6%', '9%', '9%']}
+                  alt="settings"
+                />
+                <Text
+                  fontSize={{ base: '0', md: '11px' }}
+                  pl={{ base: '0', md: '6px' }}
+                >
+                  Settings
+                </Text>
+              </Flex>
+            </Box>
+          </Flex>
+          <Box>
+            <Image
+              src={workers}
+              objectFit={'contain'}
+              w={['15%', '45%']}
+              alt="workers"
+              pb={'5px'}
+              pt={'5px'}
+            />
+            <Text
+              textColor={'grey'}
+              fontSize={{ base: '0', md: '6px', lg: '9px' }}
+              fontWeight={'bold'}
+              pb={'3px'}
+              pt={'3px'}
+            >
+              Download our Mobile App and be up to date
+            </Text>
+            <Button
+              bg={'#362FD9'}
+              textColor={'white'}
+              mt={'10px'}
+              size={['sm', 'sm', 'sm']}
+              display={{ base: 'none', md: 'block', lg: 'block' }}
+            >
+              <Flex>
+                <Image src={download} objectFit={'contain'} w={'13%'} />
+                <Text pl={'6px'} fontSize={'9px'}>
+                  Donwload App
+                </Text>
+              </Flex>
+            </Button>
+          </Box>
+        </Flex>
+      </Box>
     </Container>
   );
 };
