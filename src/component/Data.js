@@ -1,6 +1,6 @@
 import React from 'react';
 import profile1 from '../assets/profileImage.jpg';
-import { Box, Flex, Image, Text, Card, Container } from '@chakra-ui/react';
+import { Box, Flex, Image, Text, Container, Divider } from '@chakra-ui/react';
 
 const Content = [
   {
@@ -16,6 +16,7 @@ const Content = [
     date: '2020-06-09',
     status: 'status',
   },
+
   {
     img: profile1,
     clientName: 'Devon Lane',
@@ -24,6 +25,7 @@ const Content = [
     date: '2020-03-09',
     status: 'status',
   },
+
   {
     img: profile1,
     clientName: 'Esther Howard',
@@ -77,8 +79,11 @@ const Content = [
 export const Data = () => {
   return (
     <Box>
-      {Content.map(info => (
-        <Profile profileData={info} key={info.clientName} />
+      {Content.map((info, index) => (
+        <React.Fragment key={info.clientName}>
+          <Profile profileData={info} />
+          {index < Content.length - 1 && <Divider pb={'2px'} />}
+        </React.Fragment>
       ))}
     </Box>
   );
@@ -86,44 +91,44 @@ export const Data = () => {
 
 function Profile({ profileData }) {
   return (
-    <Flex justify={'space-between'} border={'2px solid red'}>
-      <Container>
-        <Text pb={'10px'}>{profileData.icon}</Text>
-        <Box border={'2px solid red'}>
-          <Image src={profileData.img} objectFit={'cover'} w={'20%'} />
-        </Box>
-      </Container>
+    <Box>
+      <Flex direction={'row'}>
+        <Container w={'20%'}>
+          <Text pb={'10px'} pl={'50%'}>
+            {profileData.icon}
+          </Text>
+          <Image
+            src={profileData.img}
+            objectFit={'cover'}
+            w={'100%'}
+            borderRadius={'20px'}
+          />
+        </Container>
 
-      <Container fontSize={'12px'}>
-        <Text pb={'10px'}>{profileData.profile}</Text>
-        <Box>
+        <Container fontSize={'12px'}>
+          <Text pb={'10px'}>{profileData.profile}</Text>
           <Text>{profileData.clientName}</Text>
           <Text>{profileData.phoneNo}</Text>
-        </Box>
-      </Container>
-      <Container fontSize={'12px'}>
-        <Text pb={'10px'}>{profileData.work}</Text>
-        <Box border={'2px solid red'} fontSize={'10px'}>
+        </Container>
+
+        <Container fontSize={'12px'}>
+          <Text pb={'10px'}>{profileData.work}</Text>
+
           <Text>{profileData.company}</Text>
-        </Box>
-      </Container>
-      <Container fontSize={'12px'}>
-        <Text>{profileData.year}</Text>
-        <Box border={'2px solid red'}>
-          <Text pb={'10px'}>{profileData.date}</Text>
-        </Box>
-      </Container>
-      <Container fontSize={'12px'}>
-        <Text pb={'10px'}>{profileData.stat}</Text>
-        <Box border={'2px solid red'}>
+        </Container>
+        <Container fontSize={'12px'}>
+          <Text pb={'10px'}>{profileData.year}</Text>
+          <Text>{profileData.date}</Text>
+        </Container>
+        <Container fontSize={'12px'}>
+          <Text pb={'10px'}>{profileData.stat}</Text>
           <Text>{profileData.status}</Text>
-        </Box>
-      </Container>
-      <Container fontSize={'12px'}>
-        <Box border={'2px solid red'}>
+        </Container>
+        <Box fontSize={'12px'}>
+          <Text>{profileData.icon}</Text>
           <Text>...</Text>
         </Box>
-      </Container>
-    </Flex>
+      </Flex>
+    </Box>
   );
 }
