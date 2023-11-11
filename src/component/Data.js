@@ -141,7 +141,7 @@ function Profile({ profileData }) {
           </Text>
           <Box
             fontSize={['5px', '12px', '12px']}
-            borderRadius={'10px'}
+            borderRadius={'20px'}
             p={'5px'}
             w={['100%', '80%', '80%']}
             bg={
