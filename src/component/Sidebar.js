@@ -17,7 +17,8 @@ export const Sidebar = () => {
   const [toggle, setToggle] = useState(false);
 
   return (
-    <Container
+    <Box
+      p={['7px']}
       w={{ base: '20%', md: '20%' }} // Full width on small screens (base), 20% width on medium and larger screens (md)
       display={{ base: toggle ? 'none' : 'block', md: 'block' }} // Hide on small screens when toggle is true
       borderRight={'blue'}
@@ -34,12 +35,12 @@ export const Sidebar = () => {
             objectFit={'cover'}
             src={logo}
             alt="logo"
-            w={['23%', '50%', '55%']}
+            w={['20%', '50%', '55%']}
           />
           <Flex direction={'column'}>
             <Box mt={['20%', '9%', '9%']} textColor={'#7D7C7C'}>
               <Flex direction={'column'} lineHeight={['10', '2.8', '2.8']}>
-                <Text fontSize={['11px', '15px', '15px']} fontWeight={'bold'}>
+                <Text fontSize={['9px', '15px', '15px']} fontWeight={'bold'}>
                   Account
                 </Text>
                 <Flex
@@ -223,6 +224,6 @@ export const Sidebar = () => {
           </Box>
         </Flex>
       </Box>
-    </Container>
+    </Box>
   );
 };
