@@ -26,7 +26,7 @@ function Navigation() {
       py={'20px'}
       fontWeight={'bold'}
       width={['100%', '100%', '100%']}
-      fontSize={['5px', '6px', '10px']}
+      fontSize={['3px', '6px', '10px']}
     >
       <Flex
         justify={'space-between'}
