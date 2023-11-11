@@ -115,22 +115,30 @@ function Profile({ profileData }) {
         </Container>
 
         <Container fontSize={['3px', '12px', '12px']}>
-          <Text pb={'10px'}>{profileData.profile}</Text>
+          <Text pb={'20px'} fontWeight={'bold'}>
+            {profileData.profile}
+          </Text>
           <Text>{profileData.clientName}</Text>
           <Text>{profileData.phoneNo}</Text>
         </Container>
 
         <Container fontSize={['5px', '12px', '12px']}>
-          <Text pb={'10px'}>{profileData.work}</Text>
+          <Text pb={'20px'} fontWeight={'bold'}>
+            {profileData.work}
+          </Text>
 
           <Text>{profileData.company}</Text>
         </Container>
         <Container fontSize={['5px', '12px', '12px']}>
-          <Text pb={'10px'}>{profileData.year}</Text>
+          <Text pb={'20px'} fontWeight={'bold'}>
+            {profileData.year}
+          </Text>
           <Text>{profileData.date}</Text>
         </Container>
         <Container fontSize={['5px', '12px', '12px']}>
-          <Text pb={'10px'}>{profileData.stat}</Text>
+          <Text pb={'20px'} fontWeight={'bold'}>
+            {profileData.stat}
+          </Text>
           <Box
             fontSize={['5px', '12px', '12px']}
             borderRadius={'10px'}
