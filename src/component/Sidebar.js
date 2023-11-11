@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Box, Flex, Image, Text, Container, Button } from '@chakra-ui/react';
 import logo from '../assets/logo.png';
 import calender from '../assets/icons8-calender-20.png';
@@ -14,9 +14,12 @@ import workers from '../assets/icons8-user-groups-100.png';
 import download from '../assets/icons8-umbrella-in-circle-22.png';
 
 export const Sidebar = () => {
+  const [toggle, setToggle] = useState(true);
+
   return (
     <Container
-      w={'20%'}
+      w={{ base: '100%', md: '20%' }} // Full width on small screens (base), 20% width on medium and larger screens (md)
+      display={{ base: toggle ? 'none' : 'block', md: 'block' }} // Hide on small screens when toggle is true
       borderRight={'blue'}
       border={'1.5px solid #F1EFEF'}
       borderTop={'none'}

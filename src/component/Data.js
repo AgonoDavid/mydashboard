@@ -93,7 +93,7 @@ function Profile({ profileData }) {
   return (
     <Box>
       <Flex direction={'row'}>
-        <Container w={'20%'}>
+        <Container w={['40%', '30%', '25%']}>
           <Text pb={'10px'} pl={'50%'}>
             {profileData.icon}
           </Text>
@@ -105,26 +105,26 @@ function Profile({ profileData }) {
           />
         </Container>
 
-        <Container fontSize={'12px'}>
+        <Container fontSize={['5px', '12px', '12px']}>
           <Text pb={'10px'}>{profileData.profile}</Text>
           <Text>{profileData.clientName}</Text>
           <Text>{profileData.phoneNo}</Text>
         </Container>
 
-        <Container fontSize={'12px'}>
+        <Container fontSize={['5px', '12px', '12px']}>
           <Text pb={'10px'}>{profileData.work}</Text>
 
           <Text>{profileData.company}</Text>
         </Container>
-        <Container fontSize={'12px'}>
+        <Container fontSize={['5px', '12px', '12px']}>
           <Text pb={'10px'}>{profileData.year}</Text>
           <Text>{profileData.date}</Text>
         </Container>
-        <Container fontSize={'12px'}>
+        <Container fontSize={['5px', '12px', '12px']}>
           <Text pb={'10px'}>{profileData.stat}</Text>
           <Text>{profileData.status}</Text>
         </Container>
-        <Box fontSize={'12px'}>
+        <Box fontSize={['5px', '12px', '12px']}>
           <Text>{profileData.icon}</Text>
           <Text>...</Text>
         </Box>

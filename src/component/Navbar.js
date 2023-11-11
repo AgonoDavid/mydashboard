@@ -16,28 +16,28 @@ import profileImage from '../assets/profileImage.jpg';
 
 export const Navbar = () => {
   return (
-    <Box>
-      <Flex px={'30px'} py={'18px'}>
+    <Box width={['100%', '100%', '100%']}>
+      <Flex px={['10px', '30px', '30px']} py={'30px'}>
         <Box>
           <Text
             fontFamily={'Lora'}
             fontWeight={'bold'}
-            fontSize={'26px'}
+            fontSize={['14px', '10px', '2xl']}
             as={'h1'}
           >
-            👋 Welcome, John Doe
+            Welcome, John Doe 👋
           </Text>
         </Box>
         <Spacer />
         <Box>
-          <Flex gap={'25px'}>
+          <Flex gap={['10px', '25px', '25px']}>
             <Image
               src={search}
               objectFit={'contain'}
-              w={'20%'}
+              w={['20%', '15%', '20%']}
               border={'1px solid #7D7C7C '}
               borderRadius={'20px'}
-              p={'5px'}
+              p={'7px'}
               alt="search"
             />
             <Image
@@ -45,7 +45,7 @@ export const Navbar = () => {
               border={'1px solid #7D7C7C '}
               borderRadius={'20px'}
               objectFit={'contain'}
-              w={'20%'}
+              w={['20%', '15%', '20%']}
               p={'5px'}
               alt="question"
             />
@@ -55,7 +55,7 @@ export const Navbar = () => {
               p={'5px'}
               src={notification}
               objectFit={'contain'}
-              w={'20%'}
+              w={['20%', '15%', '20%']}
               alt="notificationBell"
             />
 
@@ -67,18 +67,29 @@ export const Navbar = () => {
           border={'1px solid #7D7C7C'}
           borderRadius={'15px'}
           p={'7px'}
-          w={'10%'}
           boxSize={'10%'}
         >
-          <Flex align={'center'} gap={'10px'}>
-            <Image src={plus} w={'18%'} objectFit={'contain'} alt="plus" />
-            <Text fontSize={'12px'} fontFamily={'Space Grotesk'}>
+          <Flex align={'center'} gap={['4px', '10px', '10px']}>
+            <Image
+              src={plus}
+              w={['15%', '13%', '18%']}
+              objectFit={'contain'}
+              alt="plus"
+            />
+            <Text
+              fontSize={['5px', '10px', '12px']}
+              fontFamily={'Space Grotesk'}
+            >
               Add item
             </Text>
           </Flex>
         </Box>
         <Button pl={'7px'} align={'center'} bg={'none'}>
-          <Image src={profileImage} w={'45px'} borderRadius={'25px'} />
+          <Image
+            src={profileImage}
+            w={['25px', '45px', '45px']}
+            borderRadius={'25px'}
+          />
         </Button>
       </Flex>
       <Divider />
