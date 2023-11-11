@@ -50,7 +50,7 @@ export const Sidebar = () => {
                   pl={'2px'}
                   bg={'#D6D5F7'}
                   textColor={'white'}
-                  w={['10%', '55%']}
+                  w={['10%', '35%', '40%']}
                 >
                   <Image
                     src={home}
